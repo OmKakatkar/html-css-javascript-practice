@@ -1,0 +1,43 @@
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  border: 4px solid rgb(75, 70, 70);
+  margin: 30px auto auto auto;
+  background-color: rgb(127, 179, 127);
+  padding: 10px;
+}
+
+.item {
+  border: 2px solid rgb(75, 70, 70);
+  background-color: rgb(197, 241, 241);
+  margin: 6px;
+}
+
+p, h3 {
+  text-align: justify;
+  padding: 5px;
+}
+
+#breakfast {
+  width: 48%;
+  float: left;
+}
+
+#lunch-dinner {
+  width: 48%;
+  float: left;
+}
+
+#dessert-drinks {
+  width: 98%;
+  clear: left;
+  margin-top: 230px;
+}
+
+h1 {
+  text-align: center;
+  padding: 6px auto;
+}
