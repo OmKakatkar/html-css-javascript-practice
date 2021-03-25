@@ -1,0 +1,36 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.labels,
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 9px;
+    padding: 2px 2px;
+}
+
+input,
+label {
+    padding: 6px 2px;
+    margin: 5px 2px;
+}
