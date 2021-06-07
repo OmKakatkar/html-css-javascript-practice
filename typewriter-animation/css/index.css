@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+:root {
+  --bg-color: rgb(238, 245, 190);
+  --typewriter-speed: 6s;
+  --typewriter-chars: 15;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  min-height: 100vh;
+  /* Grid is necessary here or it gives some problem */
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  position: relative;
+  font-family: monospace;
+}
+
+h1::before,
+h1::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+h1::before {
+  background-color: var(--bg-color);
+  /* Steps is the number of letters */
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+    1s forwards;
+}
+
+h1::after {
+  width: 0.125em;
+  background-color: black;
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+      1s forwards,
+    blink 600ms steps(14) infinite;
+}
+
+.subtitle {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: fade 2s ease calc(var(--typewriter-speed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
